@@ -2,7 +2,8 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
 }
 
 :root{
@@ -10,7 +11,7 @@
 }
 
 #banner{
-    background: linear-gradient(rgba(0,0,0,0.5),var(--base-color)),url(images/train.png);
+    background: linear-gradient(rgba(0,0,0,0.5),var(--base-color)),url(../images/train.png);
     background-size: cover;
     background-position: center;
     height: 70svh;
@@ -29,8 +30,8 @@
 }
 
 .banner-text h1{
-    font-size: 100px;
-    font-family: 'Poppins', sans-serif;
+    font-size: 120px;
+    font-family: 'Oswald', sans-serif;
 }
 
 .banner-text p{
@@ -100,13 +101,13 @@
 
 #feature{
     width: 100%;
-    padding: 70px 0;
+    padding: 50px 0;
     background-color: #EEEEEE;
 }
 
 .title-text{
     text-align: center;
-    padding-bottom: 70px;
+    padding-bottom: 20px;
 }
 
 .title-text p{
@@ -133,7 +134,7 @@
 }
 
 .title-text h1{
-    font-size: 50px;
+    font-size: 80px;
 }
 
 .feature-box{
@@ -166,10 +167,14 @@
     color: var(--base-color);
 }
 
+.features p{
+    font-size: 20px;
+}
+
 .feature-desc{
     display: flex;
     align-items: center;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 
 .feature-icon .fa{
@@ -190,7 +195,7 @@
 .sc-description{
     padding: 0 20px;
     text-align: center;
-    padding-bottom: 60px;
+    padding-bottom: 20px;
 }
 
 @media screen and (max-width: 770px){
@@ -215,7 +220,7 @@
 
 #service{
     width: 100%;
-    padding: 70px 0;
+    padding: 50px 0;
     background: white;
 
 }
@@ -307,7 +312,7 @@ hr{
 
 #testimonial{
     width: 100%;
-    padding: 70px 0;
+    padding: 50px 0;
     background-color: #EEEEEE;
 }
 
