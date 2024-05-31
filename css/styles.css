@@ -231,11 +231,10 @@
     flex-wrap: wrap;
     justify-content: space-around;
     margin: auto;
-
 }
 
 .single-service{
-    flex-basis: 35%;
+    flex-basis: 45%;
     text-align: center;
     border-radius: 7px;
     margin-bottom: 20px;
@@ -294,7 +293,7 @@ hr{
 
 @media screen and (max-width: 770px){
     .single-service{
-        flex-basis: 100%;
+        flex-basis: 400px;
         margin-bottom: 30px;
     }
     .service-desc p{
