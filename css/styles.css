@@ -490,11 +490,6 @@ hr{
     text-align: initial;
 }
 
-.sc-description{
-    padding: 0 20px;
-    text-align: center;
-    padding-bottom: 20px;
-}
 
 @media screen and (max-width: 770px){
     .title-text h1{
