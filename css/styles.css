@@ -23,16 +23,16 @@
 }
 
 .title-top img{
-    height: 60px;
-    padding-left: 40px;
+    height: 40px;
+    padding-left: 20px;
     padding-right: 40px;
     display: flex;
 }
 
 .title-top-name h1{
     height: 60px;
-    font-size: 40px;
-    padding-right: 50px;
+    font-size: 35px;
+    padding-right: 0px;
     font-weight: 400;
     display: flex;
     text-align: center;
@@ -43,7 +43,7 @@
 
 .navbar{
     height: 60px;
-    margin: 0 40px;
+    margin: 0 0px;
     display: flex;
     align-items: center;
     justify-content: end;
@@ -52,7 +52,7 @@
 .navbar a{
     display: flex;
     gap: 2rem;
-    font-size: 18px;
+    font-size: 22px;
     color: #004f71;
     font-weight: 500;
     text-decoration: none;
@@ -82,6 +82,7 @@
     cursor: pointer;
     display: none;
     padding-right: 30px;
+    padding-left: 30px;
 }
 
 .dropdown_menu{
@@ -147,6 +148,10 @@
     }
     .top-name h1{
         padding-right: 75px;
+        
+    }
+    .title-top-name h1{
+        font-size: 22px;
     }
 }
 
@@ -229,9 +234,10 @@
 
 .title-text p{
     font-size: 20px;
-    padding-bottom: 10px;
-    padding-left: 120px;
-    padding-right: 120px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+    box-sizing: border-box;
 }
 
 .title-text h1{
@@ -249,7 +255,7 @@
 }
 
 .service-box{
-    width: 80%;
+    max-width: 900px;
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-around;
@@ -257,7 +263,8 @@
 }
 
 .single-service{
-    flex-basis: 45%;
+    flex-basis: 35%;
+    box-sizing: border-box;
     text-align: center;
     border-radius: 7px;
     margin-bottom: 20px;
@@ -274,7 +281,7 @@
 
 .service-overlay{
     width: 100%;
-    height: 99%;
+    height: 100%;
     position: absolute;
     top: 0;
     border-radius: 7px;
@@ -284,8 +291,32 @@
     transition: 1s;
 }
 
+.image-container {
+    position: relative;
+    width: 100%;         /* make container width follow parent */
+    max-width: 400px;    /* or whatever max width you want */
+    margin: 0 auto;      /* center it horizontally if smaller */
+}
+
+.image-container img {
+    width: 100%;         /* image fills container width */
+    height: auto;        /* maintain aspect ratio */
+    border-radius: 7px;
+    display: block;      /* remove inline gap below img */
+}
+
 .single-service:hover .service-overlay{
     opacity: 1;
+}
+
+.single-service ul {
+    color: #333;
+    list-style-position: inside;
+    text-align: center;
+    padding-left: 0;
+    margin-top: 10px;
+    font-size: 20px;
+    line-height: 1.6;
 }
 
 .service-desc{
@@ -296,6 +327,20 @@
     opacity: 0;
     transform: translateX(-50%);
     transition: 1s;
+}
+
+.service-scheme {
+    max-width: 900px;        /* Prevents the image from being too wide */
+    margin-left: auto;
+    margin-right: auto;      /* Creates dynamic left/right space */
+    padding: 0 20px;         /* Acts like margins before shrinking */
+    box-sizing: border-box;
+}
+
+.service-scheme img {
+  width: 100%;             /* Makes the image resize with the container */
+  height: auto;
+
 }
 
 hr{
@@ -321,7 +366,7 @@ hr{
 }
 
 .single-service:hover .service-desc{
-    bottom: 40%;
+    bottom: 30%;
     opacity: 1;
 }
 
@@ -333,47 +378,68 @@ hr{
         flex-basis: 400px;
         margin-bottom: 30px;
     }
+    .service-overlay{
+        opacity: 1;
+    }
+
+    .service-desc{
+        opacity: 1;
+        bottom: 40%;
+    }
     .service-desc p{
-        font-size: 12px;
+        font-size: 16px;
+        bottom: 30%;
     }
     hr{
         margin: 5px auto;
     }
     .single-service:hover .service-desc{
-        bottom: 35% !important;
+        bottom: 50% !important;
     }
 
     .title-text p{
-        padding-left: 60px;
-        padding-right: 60px;
+        padding-left: 20px;
+        padding-right: 20px;
     }
 }
 
 /* INDEX TEAM*/
 
 .team-box{
-    width: 80%;
-    margin: auto;
+  max-width: 900px;      /* Limits text width on large screens */
+  margin-left: auto;
+  margin-right: auto;    /* Centers the block with dynamic margins */
+    padding: 0 40px;       /* Acts as left/right margin before shrinking */
+  box-sizing: border-box;
+
+
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     text-align: center;
+    
+
 }
 
 .team-features{
-    flex-basis: 50%;
+      max-width: 1200px;      /* Limits text width on large screens */
+  margin-left: auto;
+  margin-right: auto;    /* Centers the block with dynamic margins */
+  padding: 0 40px;       /* Acts as left/right margin before shrinking */
+  box-sizing: border-box;
 }
 
 .team-features-img{
-    flex-basis: 50%;
-    margin: auto;
+  max-width: 800px;      /* Limits text width on large screens */
+  margin-left: auto;
+  margin-right: auto;    /* Centers the block with dynamic margins */
+    padding: 0 40px;       /* Acts as left/right margin before shrinking */
+  
 }
 
 .team-features-img img{
+      max-width: 800px;      /* Limits text width on large screens */
     border-radius: 10px;
-    width: 80%;
-    height: auto;
-    object-fit: contain;
 }
 
 .team-features h1{
@@ -409,9 +475,12 @@ hr{
 }
 
 .team-description p{
-    padding-left: 50px;
-    padding-right: 50px;
     font-size: 20px;
+  max-width: 900px;      /* Limits text width on large screens */
+  margin-left: auto;
+  margin-right: auto;    /* Centers the block with dynamic margins */
+  padding: 0 40px;       /* Acts as left/right margin before shrinking */
+  box-sizing: border-box;
 }
 
 .team-description{
@@ -464,12 +533,18 @@ hr{
 }
 
 .research-box{
-    width: 80%;
-    margin: auto;
+
+
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     text-align: center;
+
+      max-width: 1200px;      /* Limits text width on large screens */
+  margin-left: auto;
+  margin-right: auto;    /* Centers the block with dynamic margins */
+  padding: 0 40px;       /* Acts as left/right margin before shrinking */
+  box-sizing: border-box;
 }
 
 
@@ -492,6 +567,7 @@ hr{
 }
 
 .research-features h1{
+    font-size: 25px;
     text-align: left;
     margin-bottom: 10px;
     font-weight: 300;
@@ -559,12 +635,16 @@ hr{
 /* FACILITY */
 
 .facility-box{
-    width: 80%;
-    margin: auto;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    text-align: center;  
+    text-align: center;
+
+      max-width: 1200px;      /* Limits text width on large screens */
+  margin-left: auto;
+  margin-right: auto;    /* Centers the block with dynamic margins */
+  padding: 0 40px;       /* Acts as left/right margin before shrinking */
+  box-sizing: border-box;
 }
 
 .facility-features{
@@ -600,8 +680,7 @@ hr{
     display: flex;
     align-items: center;
     justify-content: left;
-    margin-left: 40px;
-    margin-right: 40px;
+
 }
 
 .facility-icon .fa{
@@ -739,4 +818,117 @@ hr{
     .footer-img{
         top: 25%;
     }
+}
+
+
+.CSSgal {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: 600px;
+  height: 400px;
+  margin: 0 auto;
+}
+
+.CSSgal .slider {
+  display: flex;
+  transition: transform 0.8s ease;
+  height: 100%;
+}
+
+.CSSgal .slide {
+  flex: 0 0 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  border-radius: 20px;
+}
+
+/* Bullets */
+.CSSgal .bullets {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+.CSSgal .bullets span {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin: 0 5px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.5);
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.CSSgal .bullets span.active {
+  background: rgba(255,255,255,1);
+}
+
+/* Prev/Next buttons */
+.CSSgal .prevNext button {
+  position: absolute;
+  top: 50%;               /* center vertically */
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);  /* semi-transparent dark background */
+  color: white;            /* white arrow text */
+  border: none;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  font-size: 24px;
+  border-radius: 50%;      /* circular buttons */
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.CSSgal .prevNext .prev { left: 10px; }
+.CSSgal .prevNext .next { right: 10px; }
+
+.CSSgal .prevNext button:hover {
+  background: rgba(0,0,0,0.8);  /* darker on hover */
+  transform: translateY(-50%) scale(1.1);  /* slight zoom effect */
+}
+
+
+
+
+/* Portable tribometer */
+/* Slider 1 images */
+#slider1 .slide1 { background-image: url('../images/FACILITY/portable-tribometer1.jpg'); }
+#slider1 .slide2 { background-image: url('../images/FACILITY/portable-tribometer2.jpg'); }
+#slider1 .slide3 { background-image: url('../images/FACILITY/portable-tribometer3.jpg'); }
+#slider1 .slide4 { background-image: url('../images/FACILITY/portable-tribometer4.jpg'); }
+
+#slider2 .slide1 { background-image: url('../images/FACILITY/small-twindisc1.jpg'); }
+#slider2 .slide2 { background-image: url('../images/FACILITY/small-twindisc2.jpg'); }
+#slider2 .slide3 { background-image: url('../images/FACILITY/small-twindisc3.jpg'); }
+#slider2 .slide4 { background-image: url('../images/FACILITY/small-twindisc4.jpg'); }
+
+#slider3 .slide1 { background-image: url('../images/FACILITY/MTM1.jpg'); }
+#slider3 .slide2 { background-image: url('../images/FACILITY/MTM2.jpg'); }
+#slider3 .slide3 { background-image: url('../images/FACILITY/MTM3.jpg'); }
+#slider3 .slide4 { background-image: url('../images/FACILITY/MTM4.jpg'); }
+
+#slider4 .slide1 { background-image: url('../images/FACILITY/small-twindisc1.jpg'); }
+#slider4 .slide2 { background-image: url('../images/FACILITY/small-twindisc2.jpg'); }
+#slider4 .slide3 { background-image: url('../images/FACILITY/small-twindisc3.jpg'); }
+#slider4 .slide4 { background-image: url('../images/FACILITY/small-twindisc4.jpg'); }
+
+#slider5 .slide1 { background-image: url('../images/FACILITY/small-twindisc1.jpg'); }
+#slider5 .slide2 { background-image: url('../images/FACILITY/small-twindisc2.jpg'); }
+#slider5 .slide3 { background-image: url('../images/FACILITY/small-twindisc3.jpg'); }
+#slider5 .slide4 { background-image: url('../images/FACILITY/small-twindisc4.jpg'); }
+
+
+@media (max-width: 1000px) {
+  .CSSgal {
+    height: 400px;   /* Adjust as needed */
+    width: auto;
+  }
 }
