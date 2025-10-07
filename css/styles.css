@@ -741,7 +741,8 @@ hr{
   overflow: hidden; /* ensures background image doesn’t spill out */
   color: black;
   text-align: center;
-  padding: 50px 0;
+  padding: 0px 0;
+  background-color: #f8fafd;
 }
 
 /* Background container */
