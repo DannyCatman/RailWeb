@@ -901,15 +901,15 @@ hr{
 #slider3 .slide3 { background-image: url('../images/FACILITY/MTM3.jpg'); }
 #slider3 .slide4 { background-image: url('../images/FACILITY/MTM4.jpg'); }
 
-#slider4 .slide1 { background-image: url('../images/FACILITY/small-twindisc1.jpg'); }
-#slider4 .slide2 { background-image: url('../images/FACILITY/small-twindisc2.jpg'); }
-#slider4 .slide3 { background-image: url('../images/FACILITY/small-twindisc3.jpg'); }
-#slider4 .slide4 { background-image: url('../images/FACILITY/small-twindisc4.jpg'); }
+#slider4 .slide1 { background-image: url('../images/FACILITY/largeTD1.jpg'); }
+#slider4 .slide2 { background-image: url('../images/FACILITY/largeTD2.jpg'); }
+#slider4 .slide3 { background-image: url('../images/FACILITY/largeTD3.jpg'); }
+#slider4 .slide4 { background-image: url('../images/FACILITY/largeTD4.jpg'); }
 
-#slider5 .slide1 { background-image: url('../images/FACILITY/small-twindisc1.jpg'); }
-#slider5 .slide2 { background-image: url('../images/FACILITY/small-twindisc2.jpg'); }
-#slider5 .slide3 { background-image: url('../images/FACILITY/small-twindisc3.jpg'); }
-#slider5 .slide4 { background-image: url('../images/FACILITY/small-twindisc4.jpg'); }
+#slider5 .slide1 { background-image: url('../images/FACILITY/HPT1.jpg'); }
+#slider5 .slide2 { background-image: url('../images/FACILITY/HPT2.jpg'); }
+#slider5 .slide3 { background-image: url('../images/FACILITY/HPT3.jpg'); }
+#slider5 .slide4 { background-image: url('../images/FACILITY/HPT4.jpg'); }
 
 
 @media (hover: none){
@@ -917,4 +917,60 @@ hr{
     height: 400px;   /* Adjust as needed */
     width: auto;
   }
+}
+
+.research-papers {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.research-papers h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.papers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.paper {
+  background: #f8f8f8;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.paper:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.paper h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.paper p {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.paper a {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  background-color: black;
+  padding: 8px 15px;
+  border-radius: 6px;
+  transition: background-color 0.3s;
+}
+
+.paper a:hover {
+  background-color: black;
 }
