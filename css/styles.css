@@ -370,7 +370,7 @@ hr{
     opacity: 1;
 }
 
-@media screen and (max-width: 1000px){
+@media (hover: none){
     .service-box{
         flex-wrap: wrap;
     }
@@ -489,7 +489,7 @@ hr{
     padding-bottom: 20px;
 }
 
-@media screen and (max-width: 1000px){
+@media (hover: none){
     .title-text h1{
         font-size: 35px;
     }
@@ -612,7 +612,7 @@ hr{
     display: flex;
 }
 
-@media screen and (max-width: 1000px){
+@media (hover: none){
 
     .research-features{
         flex-basis: 100%;
@@ -710,7 +710,7 @@ hr{
     padding-bottom: 20px;
 }
 
-@media screen and (max-width: 1000px){
+@media (hover: none){
     .title-text h1{
         font-size: 35px;
     }
@@ -736,40 +736,32 @@ hr{
 
 /* FOOTER */
 
-#footer{
-    padding: 20px 0 20px;
-    background-color: #fff;
-    position: relative;
+#footer {
+  position: relative;
+  overflow: hidden; /* ensures background image doesn’t spill out */
+  color: black;
+  text-align: center;
+  padding: 50px 0;
 }
 
-.footer-row{
-    width: 80%;
-    display: flex;
-    flex-wrap: wrap;
+/* Background container */
+.footer-background {
+  position: absolute;
+  inset: 0; /* shorthand for top:0; right:0; bottom:0; left:0 */
+  z-index: 0; /* keep it behind text but above body */
 }
 
-.footer-left, .footer-right{
-    flex-basis: 45%;
-    padding: 10px;
-    margin-bottom: 20px;
+.footer-background .footer-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* makes image fill area nicely */
+  opacity: 0.2; /* adjust visibility */
 }
 
-.footer-right{
-    text-align: center;
-}
-
-.footer-row h1{
-    margin: 10px 0;
-}
-
-.footer-row p{
-    line-height: 35px;
-}
-
-.footer-left .fa, .footer-right .fa{
-    font-size: 20px;
-    color: var(--base-color);
-    margin: 10px;
+/* All footer content */
+#footer > *:not(.footer-background) {
+  position: relative;
+  z-index: 1; /* ensures text and icons appear above the image */
 }
 
 .footer-img{
@@ -779,39 +771,33 @@ hr{
     left: 50%;
     top: 35%;
     transform: translate(-50%,-30%);
+    z-index: -1;          /* 🔥 sends it behind everything */
+    pointer-events: none; /* 🔥 makes it not block clicks */
 }
 
-.social-links{
-    text-align: center;
+.footer-text{
+    padding-bottom: 20px;
 }
 
-.social-links .fa{
-    cursor: pointer;
-
-    height: 40px;
-    width: 40px;
-    font-size: 20px;
-    
-    line-height: 40px;
-    margin: 40px 20px 0px;
-    border: 1px solid var(--base-color);
-    
-    color: var(--base-color);
-
+.social-links {
+  display: flex;
+  gap: 25px;              /* spacing between icons */
+  justify-content: center;
 }
 
-.social-links .fa:hover{
-    background: var(--base-color);
-    color: #fff;
+.social-links a {
+  color: #444;            /* icon color */
+  font-size: 30px;
+  transition: color 0.3s;
 }
 
-.social-links p{
-    font-size: 12px;
-    margin-top: 100px;
+.social-links a:hover {
+  color: #007bff;         /* change color on hover */
 }
 
-@media screen and (max-width: 1000px){
-    .footer-left, .footer-right{
+
+@media (hover: none){
+    .footer-text{
         flex-basis: 100%;
         font-size: 14px;
     }
@@ -926,7 +912,7 @@ hr{
 #slider5 .slide4 { background-image: url('../images/FACILITY/small-twindisc4.jpg'); }
 
 
-@media (max-width: 1000px) {
+@media (hover: none){
   .CSSgal {
     height: 400px;   /* Adjust as needed */
     width: auto;
